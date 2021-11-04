@@ -1,4 +1,4 @@
-package com.sapiensCourses.FirstSpring;
+package com.sapiensCourses.FirstSpring.ioc;
 
 public class Contact {
     int primary_mobile_no;

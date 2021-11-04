@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id ="employee1" class="com.sapiensCourses.FirstSpring.Employee">
-        <property name="id" value="101"/>
-        <property name="name" value="Salma"/>
-        <property name="age" value="24"/>
-        <property name="gender" value="Female"/>
-    </bean>
+        <bean id ="employee1" class="com.sapiensCourses.FirstSpring.ioc.Employee">
+            <property name="id" value="101"/>
+            <property name="name" value="Salma"/>
+            <property name="age" value="24"/>
+            <property name="gender" value="Female"/>
+        </bean>
 
-    <bean id="address1" class="com.sapiensCourses.FirstSpring.Address">
-        <property name="city" value="Haifa"/>
-        <property name="state" value="Israel"/>
-        <property name="country" value="Israel"/>
-        <property name="pincode" value="124356"/>
-        <property name="po_box_no" value="2224"/>
-    </bean>
+        <bean id="address1" class="com.sapiensCourses.FirstSpring.ioc.Address">
+            <property name="city" value="Haifa"/>
+            <property name="state" value="Israel"/>
+            <property name="country" value="Israel"/>
+            <property name="pincode" value="124356"/>
+            <property name="po_box_no" value="2224"/>
+        </bean>
 
-    <bean id="contact1" class="com.sapiensCourses.FirstSpring.Contact">
-        <property name="primary_mobile_no" value="123456789"/>
-        <property name="secondary_mobile_no" value="987654321"/>
-        <property name="emergency_no" value="123654789"/>
-        <property name="email_id" value="salma1@gmail.com"/>
-        <property name="Official_email_id" value="salmash@gmail.com"/>
-    </bean>
+        <bean id="contact1" class="com.sapiensCourses.FirstSpring.ioc.Contact">
+            <property name="primary_mobile_no" value="123456789"/>
+            <property name="secondary_mobile_no" value="987654321"/>
+            <property name="emergency_no" value="123654789"/>
+            <property name="email_id" value="salma1@gmail.com"/>
+            <property name="Official_email_id" value="salmash@gmail.com"/>
+        </bean>
 
-    <bean id="officialDetails1" class="com.sapiensCourses.FirstSpring.OfficialDetails">
-        <property name="edu_qualification" value="BA"/>
-        <property name="percentage" value="88"/>
-        <property name="Designation" value="CEO Delivery"/>
-        <property name="years_of_experience" value="1"/>
-        <property name="current_comp_name" value="Sapiens"/>
-    </bean>
+        <bean id="officialDetails1" class="com.sapiensCourses.FirstSpring.ioc.OfficialDetails">
+            <property name="edu_qualification" value="BA"/>
+            <property name="percentage" value="88"/>
+            <property name="Designation" value="CEO Delivery"/>
+            <property name="years_of_experience" value="1"/>
+            <property name="current_comp_name" value="Sapiens"/>
+        </bean>
 
-    <bean id ="employee2" class="com.sapiensCourses.FirstSpring.Employee">
-        <property name="id" value="102"/>
-        <property name="name" value="Jack"/>
-        <property name="age" value="30"/>
-        <property name="gender" value="Male"/>
-    </bean>
+        <bean id ="employee2" class="com.sapiensCourses.FirstSpring.ioc.Employee">
+                <property name="id" value="102"/>
+                <property name="name" value="Jack"/>
+                <property name="age" value="30"/>
+                <property name="gender" value="Male"/>
+        </bean>
 
     <bean id="address2" class="com.sapiensCourses.FirstSpring.Address">
         <property name="city" value="Turkey"/>
@@ -49,86 +49,86 @@
         <property name="country" value="Istanbul"/>
         <property name="pincode" value="543216"/>
         <property name="po_box_no" value="7543"/>
-    </bean>
+        </bean>
 
-    <bean id="contact2" class="com.sapiensCourses.FirstSpring.Contact">
-        <property name="primary_mobile_no" value="654673564"/>
-        <property name="secondary_mobile_no" value="7664332"/>
-        <property name="emergency_no" value="67573433"/>
-        <property name="email_id" value="jack1@gmail.com"/>
-        <property name="Official_email_id" value="jackCo@gmail.com"/>
-    </bean>
+        <bean id="contact2" class="com.sapiensCourses.FirstSpring.Contact">
+            <property name="primary_mobile_no" value="654673564"/>
+            <property name="secondary_mobile_no" value="7664332"/>
+            <property name="emergency_no" value="67573433"/>
+            <property name="email_id" value="jack1@gmail.com"/>
+            <property name="Official_email_id" value="jackCo@gmail.com"/>
+        </bean>
 
-    <bean id="officialDetails2" class="com.sapiensCourses.FirstSpring.OfficialDetails">
-        <property name="edu_qualification" value="B.c"/>
-        <property name="percentage" value="90"/>
-        <property name="Designation" value="CEO Delivery"/>
-        <property name="years_of_experience" value="5"/>
-        <property name="current_comp_name" value="Sapiens"/>
-    </bean>
+        <bean id="officialDetails2" class="com.sapiensCourses.FirstSpring.OfficialDetails">
+            <property name="edu_qualification" value="B.c"/>
+            <property name="percentage" value="90"/>
+            <property name="Designation" value="CEO Delivery"/>
+            <property name="years_of_experience" value="5"/>
+            <property name="current_comp_name" value="Sapiens"/>
+        </bean>
 
-    <bean id ="employee3" class="com.sapiensCourses.FirstSpring.Employee">
-        <property name="id" value="103"/>
-        <property name="name" value="Lozan"/>
-        <property name="age" value="25"/>
-        <property name="gender" value="Female"/>
-    </bean>
+        <bean id ="employee3" class="com.sapiensCourses.FirstSpring.Employee">
+            <property name="id" value="103"/>
+            <property name="name" value="Lozan"/>
+            <property name="age" value="25"/>
+            <property name="gender" value="Female"/>
+        </bean>
 
-    <bean id="address3" class="com.sapiensCourses.FirstSpring.Address">
-        <property name="city" value="Israel"/>
-        <property name="state" value="TelAviv"/>
-        <property name="country" value="TelAviv"/>
-        <property name="pincode" value="35324"/>
-        <property name="po_box_no" value="9842"/>
-    </bean>
+        <bean id="address3" class="com.sapiensCourses.FirstSpring.Address">
+            <property name="city" value="Israel"/>
+            <property name="state" value="TelAviv"/>
+            <property name="country" value="TelAviv"/>
+            <property name="pincode" value="35324"/>
+            <property name="po_box_no" value="9842"/>
+        </bean>
 
-    <bean id="contact3" class="com.sapiensCourses.FirstSpring.Contact">
-        <property name="primary_mobile_no" value="8642255"/>
-        <property name="secondary_mobile_no" value="76334332"/>
-        <property name="emergency_no" value="673355433"/>
-        <property name="email_id" value="lozan121@gmail.com"/>
-        <property name="Official_email_id" value="lozan533@gmail.com"/>
-    </bean>
+        <bean id="contact3" class="com.sapiensCourses.FirstSpring.Contact">
+            <property name="primary_mobile_no" value="8642255"/>
+            <property name="secondary_mobile_no" value="76334332"/>
+            <property name="emergency_no" value="673355433"/>
+            <property name="email_id" value="lozan121@gmail.com"/>
+            <property name="Official_email_id" value="lozan533@gmail.com"/>
+        </bean>
 
-    <bean id="officialDetails3" class="com.sapiensCourses.FirstSpring.OfficialDetails">
-        <property name="edu_qualification" value="B.c"/>
-        <property name="percentage" value="85"/>
-        <property name="Designation" value="R and D"/>
-        <property name="years_of_experience" value="2"/>
-        <property name="current_comp_name" value="Sapiens"/>
-    </bean>
-
-
-    <bean id ="employee4" class="com.sapiensCourses.FirstSpring.Employee">
-        <property name="id" value="104"/>
-        <property name="name" value="Miran"/>
-        <property name="age" value="28"/>
-        <property name="gender" value="Male"/>
-    </bean>
-
-    <bean id="address4" class="com.sapiensCourses.FirstSpring.Address">
-        <property name="city" value="Israel"/>
-        <property name="state" value="Holon"/>
-        <property name="country" value="Israel"/>
-        <property name="pincode" value="2442"/>
-        <property name="po_box_no" value="7446"/>
-    </bean>
-
-    <bean id="contact4" class="com.sapiensCourses.FirstSpring.Contact">
-        <property name="primary_mobile_no" value="134567473"/>
-        <property name="secondary_mobile_no" value="97632566"/>
-        <property name="emergency_no" value="933463566"/>
-        <property name="email_id" value="miran453@gmail.com"/>
-        <property name="Official_email_id" value="miran133@gmail.com"/>
-    </bean>
-
-    <bean id="officialDetails4" class="com.sapiensCourses.FirstSpring.OfficialDetails">
-        <property name="edu_qualification" value="B.C"/>
-        <property name="percentage" value="95"/>
-        <property name="Designation" value="R and D"/>
-        <property name="years_of_experience" value="4"/>
-        <property name="current_comp_name" value="Sapiens"/>
-    </bean>
+        <bean id="officialDetails3" class="com.sapiensCourses.FirstSpring.OfficialDetails">
+            <property name="edu_qualification" value="B.c"/>
+            <property name="percentage" value="85"/>
+            <property name="Designation" value="R and D"/>
+            <property name="years_of_experience" value="2"/>
+            <property name="current_comp_name" value="Sapiens"/>
+        </bean>
 
 
-</beans>
+        <bean id ="employee4" class="com.sapiensCourses.FirstSpring.Employee">
+            <property name="id" value="104"/>
+            <property name="name" value="Miran"/>
+            <property name="age" value="28"/>
+            <property name="gender" value="Male"/>
+        </bean>
+
+        <bean id="address4" class="com.sapiensCourses.FirstSpring.Address">
+            <property name="city" value="Israel"/>
+            <property name="state" value="Holon"/>
+            <property name="country" value="Israel"/>
+            <property name="pincode" value="2442"/>
+            <property name="po_box_no" value="7446"/>
+        </bean>
+
+        <bean id="contact4" class="com.sapiensCourses.FirstSpring.Contact">
+            <property name="primary_mobile_no" value="134567473"/>
+            <property name="secondary_mobile_no" value="97632566"/>
+            <property name="emergency_no" value="933463566"/>
+            <property name="email_id" value="miran453@gmail.com"/>
+            <property name="Official_email_id" value="miran133@gmail.com"/>
+        </bean>
+
+        <bean id="officialDetails4" class="com.sapiensCourses.FirstSpring.ioc.OfficialDetails">
+            <property name="edu_qualification" value="B.C"/>
+            <property name="percentage" value="95"/>
+            <property name="Designation" value="R and D"/>
+            <property name="years_of_experience" value="4"/>
+            <property name="current_comp_name" value="Sapiens"/>
+        </bean>
+
+
+    </beans>

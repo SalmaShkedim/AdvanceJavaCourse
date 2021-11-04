@@ -1,4 +1,4 @@
-package com.sapiensCourses.FirstSpring;
+package com.sapiensCourses.FirstSpring.ioc;
 
 public class OfficialDetails {
     String edu_qualification;

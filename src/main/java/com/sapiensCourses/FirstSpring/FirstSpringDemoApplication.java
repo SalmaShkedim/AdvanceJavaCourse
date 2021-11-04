@@ -2,6 +2,10 @@ package com.sapiensCourses.FirstSpring;
 
 
 import com.sapiensCourses.FirstSpring.Di.SetterBasedDI;
+import com.sapiensCourses.FirstSpring.ioc.Address;
+import com.sapiensCourses.FirstSpring.ioc.Contact;
+import com.sapiensCourses.FirstSpring.ioc.Employee;
+import com.sapiensCourses.FirstSpring.ioc.OfficialDetails;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
