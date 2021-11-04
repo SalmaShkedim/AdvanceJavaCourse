@@ -14,11 +14,11 @@ public class MainDI {
         communication2.communication();
 
         AbstractApplicationContext context3 = new ClassPathXmlApplicationContext("SetterBeans.xml");
-        Communication communication3 = (Communication) context2.getBean("communication3");
+        Communication communication3 = (Communication) context3.getBean("communication3");
         communication3.communication();
 
         AbstractApplicationContext context4 = new ClassPathXmlApplicationContext("SetterBeans.xml");
-        Communication communication4 = (Communication) context2.getBean("communication4");
+        Communication communication4 = (Communication) context4.getBean("communication4");
         communication4.communication();
     }
 
