@@ -9,29 +9,26 @@ import java.util.List;
 @Service
 public class ContactService {
     @Autowired
-    private DaoJpa daoJpa;
+    private Dao dao;
 
-
-    public void saveContact(Contact contact){
+    public void insertContact(Contact con){
         try{
-            daoJpa.saveContact(contact);
+            dao.insertContact(con);
         }catch (DataAccessException e){
             e.printStackTrace();
         }
     }
-
     public List<Contact> getAllContacts(){
         try{
-            return daoJpa.findAll();
+            return dao.findAll();
         }catch (DataAccessException e){
             e.printStackTrace();
         }
         return null;
     }
-
-    public Contact getByContactId(int id){
+    public Contact getContactById(int id){
         try{
-            return daoJpa.findByContactId(id);
+            return dao.findByContactId(id);
         }catch (DataAccessException e){
             e.printStackTrace();
         }
@@ -40,45 +37,44 @@ public class ContactService {
 
     public List<Contact> getByCountry(String country){
         try{
-            return daoJpa.findByCountry(country);
+            return dao.findByCountry(country);
         }catch (DataAccessException e){
             e.printStackTrace();
         }
         return null;
     }
 
-    public  List<Contact> getByPremiumAmount(double premium_amount ){
+    public List<Contact> getByPremium(double premium){
         try{
-            return daoJpa.findByPremiumAmount(premium_amount);
+            return dao.findByPremiumAmount(premium);
         }catch (DataAccessException e){
             e.printStackTrace();
         }
         return null;
     }
 
-    public List<Contact> getByInsuranceType(String insurance_type){
+    public List<Contact> getByInsuranceType(String type){
         try{
-            return daoJpa.findByInsuranceType(insurance_type);
+            return dao.findByInsuranceType(type);
         }catch (DataAccessException e){
             e.printStackTrace();
         }
         return null;
     }
 
-    public void deleteContact(int i){
-        try{
-            daoJpa.delete(i);
-        }catch (DataAccessException e){
+    public void updateContact(Contact contact) {
+        try {
+            dao.update(contact);
+        } catch (DataAccessException e) {
             e.printStackTrace();
         }
     }
 
-    public void updateContact(Contact contact){
+    public void deleteContact(int id) {
         try{
-            daoJpa.update(contact);
+            dao.delete(id);
         }catch (DataAccessException e){
             e.printStackTrace();
         }
     }
-
 }

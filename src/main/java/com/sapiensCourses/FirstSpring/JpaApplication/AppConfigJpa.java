@@ -15,14 +15,11 @@ public class AppConfigJpa {
         factoryBean.setPersistenceUnitName("example-unit");
         return factoryBean;
     }
+
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfigJpa.class);
         context.getBean(ContactClientBean.class).run();
-
-
         context.getBean(LocalEntityManagerFactoryBean.class).destroy();
-
-
     }
 
 }

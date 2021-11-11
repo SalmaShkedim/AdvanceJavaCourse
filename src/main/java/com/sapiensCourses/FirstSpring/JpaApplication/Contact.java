@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Contact {
     @Id
-    private int contact_id;
+    private int id;
     private String firstName;
     private String lastName;
     private String dob;
@@ -13,18 +13,22 @@ public class Contact {
 
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "id")
-    private Address address;
+    private Insurance insurance;
 
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "id")
-    private InsuranceDetails insuranceDetails;
+    private Address address;
 
-    public int getContact_id() {
-        return contact_id;
+
+
+
+    //Getters & Setters
+    public int getId() {
+        return id;
     }
 
-    public void setContact_id(int contact_id) {
-        this.contact_id = contact_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -67,51 +71,51 @@ public class Contact {
         this.address = address;
     }
 
-    public InsuranceDetails getInsuranceDetails() {
-        return insuranceDetails;
+    public Insurance getInsurance() {
+        return insurance;
     }
 
-    public void setInsuranceDetails(InsuranceDetails insuranceDetails) {
-        this.insuranceDetails = insuranceDetails;
+    public void setInsurance(Insurance insurance) {
+        this.insurance = insurance;
     }
 
     @Override
     public String toString() {
         return "Contact{" +
-                "contact_id=" + contact_id +
+                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", dob='" + dob + '\'' +
-                ", design='" + design + '\'' +
+                ", dob=" + dob +
+                ", design='" + design+ '\'' +
                 ", address=" + address +
-                ", insuranceDetails=" + insuranceDetails +
+                ", insurance=" + insurance +
                 '}';
     }
-
-    public static Contact create(String firstName, String lastName, String dob, String design, Address addr , InsuranceDetails insurance){
+    public static Contact create(int id, String firstName, String lastName, String dob, String design, Address add, Insurance insu) {
         Contact contact = new Contact();
         Address address = new Address();
-        InsuranceDetails insuranceDetails = new InsuranceDetails();
+        Insurance insurance = new Insurance();
 
+        contact.setId(id);
         contact.setFirstName(firstName);
         contact.setLastName(lastName);
         contact.setDob(dob);
         contact.setDesign(design);
 
+        address.setId(add.getId());
+        address.setAddress(add.getAddress());
+        address.setContactNo(add.getContactNo());
+        address.setEmailID(add.getEmailID());
+        address.setCountry(add.getCountry());
 
-        address.setAddress(addr.getAddress());
-        address.setContactNo(addr.getContactNo());
-        address.setEmail_id(addr.getEmail_id());
-        address.setCountry(addr.getCountry());
-
-        insuranceDetails.setInsurance_type(insurance.getInsurance_type());
-        insuranceDetails.setValid_till(insurance.getValid_till());
-        insuranceDetails.setPremium_amount(insurance.getPremium_amount());
+        insurance.setId(insu.getId());
+        insurance.setType(insu.getType());
+        insurance.setValidTill(insu.getValidTill());
+        insurance.setPremium(insu.getPremium());
 
         contact.setAddress(address);
-        contact.setInsuranceDetails(insuranceDetails);
+        contact.setInsurance(insurance);
 
         return contact;
-
     }
 }

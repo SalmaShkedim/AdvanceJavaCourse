@@ -8,12 +8,12 @@ import javax.persistence.PersistenceUnit;
 import java.util.List;
 
 @Repository
-public class ContactDaoImpl implements DaoJpa {
+public class ContactDaoImpl implements Dao {
     @PersistenceUnit
     private EntityManagerFactory emf;
 
     @Override
-    public void saveContact(Contact contact) {
+    public void insertContact(Contact contact) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(contact);
@@ -30,9 +30,9 @@ public class ContactDaoImpl implements DaoJpa {
     }
 
     @Override
-    public Contact findByContactId(int id) {
+    public Contact findByContactId(int contact_Id) {
         EntityManager em = emf.createEntityManager();
-        Contact contact = em.find(Contact.class, id);
+        Contact contact = em.find(Contact.class, contact_Id);
         em.close();
         return contact;
     }
@@ -46,17 +46,17 @@ public class ContactDaoImpl implements DaoJpa {
     }
 
     @Override
-    public List<Contact> findByPremiumAmount(double premium_amount) {
+    public List<Contact> findByPremiumAmount(double premium) {
         EntityManager em = emf.createEntityManager();
-        List<Contact> contactList = em.createQuery("select t from Contact t where t.insurancedetails.premium_amount = :column1").setParameter("column1",premium_amount).getResultList();
+        List<Contact> contactList = em.createQuery("select t from Contact t where t.insurance.premium = :column1").setParameter("column1",premium).getResultList();
         em.close();
         return contactList;
     }
 
     @Override
-    public List<Contact> findByInsuranceType(String insurance_type) {
+    public List<Contact> findByInsuranceType(String type) {
         EntityManager em = emf.createEntityManager();
-        List<Contact> contactList = em.createQuery("select t from Contact t where t.insurancedetails.insurance_type = :column1").setParameter("column1",insurance_type).getResultList();
+        List<Contact> contactList = em.createQuery("select t from Contact t where t.insurance.type = :column1").setParameter("column1",type).getResultList();
         em.close();
         return contactList;
     }

@@ -7,10 +7,9 @@ public class Address {
     @Id
     private int id;
     private String address;
-    private int contactNo;
-    private String email_id;
+    private String contactNo;
+    private String emailID;
     private String country;
-
 
     public int getId() {
         return id;
@@ -28,20 +27,20 @@ public class Address {
         this.address = address;
     }
 
-    public int getContactNo() {
+    public String getContactNo() {
         return contactNo;
     }
 
-    public void setContactNo(int contactNo) {
+    public void setContactNo(String contactNo) {
         this.contactNo = contactNo;
     }
 
-    public String getEmail_id() {
-        return email_id;
+    public String getEmailID() {
+        return emailID;
     }
 
-    public void setEmail_id(String email_id) {
-        this.email_id = email_id;
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
     }
 
     public String getCountry() {
@@ -57,10 +56,9 @@ public class Address {
         return "Address{" +
                 "id=" + id +
                 ", address='" + address + '\'' +
-                ", contactNo=" + contactNo +
-                ", email_id='" + email_id + '\'' +
+                ", contactNo='" + contactNo + '\'' +
+                ", emailID='" + emailID + '\'' +
                 ", country='" + country + '\'' +
                 '}';
     }
-
 }
